@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ===================== HERO SECTION ===================== -->
+
+<section id="home" class="hero">
+
+    <div class="hero-container">
+
+        <!-- Left Content -->
+        <div class="hero-content">
+
+            <p class="hero-subtitle">
+                👋 Hello, I'm
+            </p>
+
+            <h1 class="hero-title">
+                Sonam
+            </h1>
+
+            <h2 class="hero-role">
+                AI Enthusiast <span>|</span>
+                Hackathon Participant
+            </h2>
+
+            <p class="hero-description">
+                I'm a Computer Science Engineering student passionate about
+                Artificial Intelligence, Machine Learning, and Full-Stack
+                Development. I enjoy creating intelligent solutions that solve
+                real-world problems and continuously learning emerging technologies.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/projects" class="btn primary-btn">
+                    <i class="fas fa-code"></i>
+                    View Projects
+                </a>
+
+                <a href="{{ url_for('static', filename='files/Resume.pdf') }}"
+                    class="btn secondary-btn"
+                    download>
+
+                    <i class="fas fa-download"></i>
+                    Download Resume
+
+                </a>
+
+            </div>
+
+            <div class="hero-socials">
+
+                <a href="#" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="mailto:yourmail@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Right Content -->
+        <div class="hero-image">
+
+            <div class="image-wrapper">
+
+               <img src="{{ url_for('static', filename='images/me pic.jpeg') }}" alt="Sonam">
+                    alt="Sonam">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Scroll Down -->
+
+    <div class="scroll-down">
+
+        <a href="#about">
+
+            <span>Scroll Down</span>
+
+            <i class="fas fa-chevron-down"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

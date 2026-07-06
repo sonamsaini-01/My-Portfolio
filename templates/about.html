@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- ===================== ABOUT SECTION ===================== -->
+
+<section id="about" class="about section">
+
+    <div class="section-title">
+        <span>Get To Know Me</span>
+        <h2>About Me</h2>
+        <p>
+            Passionate about Artificial Intelligence, software development,
+            and building innovative digital experiences.
+        </p>
+    </div>
+
+    <div class="about-container">
+
+        <!-- Left Side -->
+
+        <div class="about-image">
+
+            <img src="{{ url_for('static', filename='images/me pic.jpeg') }}"
+                 alt="Sonam">
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="about-content">
+
+            <h3>Hello! I'm Sonam 👋</h3>
+
+            <p>
+                I'm currently pursuing my Bachelor's degree in Computer
+                Science Engineering at
+                <strong>Jai Parkash Mukand Lal Innovation Engineering and
+                Technology Institute, Radaur.</strong>
+
+                I have a strong passion for Artificial Intelligence,
+                Machine Learning, and Full Stack Web Development.
+            </p>
+
+            <p>
+                I enjoy solving real-world problems through technology,
+                participating in hackathons, learning new tools,
+                and continuously improving my programming skills.
+                My goal is to become a software engineer who develops
+                intelligent and impactful applications.
+            </p>
+
+            <div class="about-info">
+
+                <div class="info-card">
+
+                    <i class="fas fa-user-graduate"></i>
+
+                    <h4>Education</h4>
+
+                    <p>B.Tech CSE</p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fas fa-laptop-code"></i>
+
+                    <h4>Interest</h4>
+
+                    <p>Artificial Intelligence</p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fas fa-trophy"></i>
+
+                    <h4>Hackathons</h4>
+
+                    <p>Active Participant</p>
+
+                </div>
+
+                <div class="info-card">
+
+                    <i class="fas fa-book-reader"></i>
+
+                    <h4>Learning</h4>
+
+                    <p>AI • Flask • ML</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

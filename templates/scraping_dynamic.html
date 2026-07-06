@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/scraping_static.css') }}">
+
+<section class="scraping-subpage">
+    <div class="subpage-banner">
+        <div class="container">
+            <h1 class="banner-title">Dynamic Website Scraping</h1>
+            <p class="banner-subtitle">Websites scraped using Requests + Webdriverr + Selenium + time.</p>
+        </div>
+    </div>
+
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px;">
+        <div class="static-grid">
+
+            
+            <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-globe"></i>
+    </div>
+    <h3>Automation Practice</h3>
+    <p>An automation Full-Fledged practice website in which we have data related to dresses, tops and other products of children as well as adults.</p>
+    
+    <div class="card-action-links">
+        <a href="{{ url_for('viewer', file='dynamic_automation.csv', title='Automation Practice') }}" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+
+        
+        
+        <div class="secondary-links"> 
+                
+            <a href="{{ url_for('static', filename='Notebooks/Dynamic Automation.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://automationexercise.com/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+           <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-briefcase"></i>
+    </div>
+    <h3>College Data USA</h3>
+    <p>search and display universities information including names, citites and tution fee in USA</p>
+    
+    <div class="card-action-links">
+  <a href="{{ url_for('viewer', file='collegedata.csv', title='College Data') }}" class="pill-btn primary-pill">
+    <i class="fas fa-table"></i> 
+    View Data Set
+</a>
+        <div class="secondary-links">
+                       <a href="{{ url_for('static', filename='Notebooks/CollegeData.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://www.collegedata.com/college-search" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-film"></i>
+    </div>
+    <h3>Dynamic Books To Scrape</h3>
+    <p>Fetch and display Title of books ,author and rating sample data dynamically.</p>
+    
+    <div class="card-action-links">
+        <a href="{{ url_for('viewer', file='dynamic_bookstoscrap.csv', title='books to scrape') }}" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+            <a href="{{ url_for('static', filename='Notebooks/Dynamic Bookstoscrap.html') }}" target="_blank" class="pill-btn secondary-pill">
+                <i class="fab fa-python"></i> Notebook
+            </a>
+            <a href="https://books.toscrape.com/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-laptop"></i>
+    </div>
+    <h3>IMDB Top 250</h3>
+    <p>Trending DataSets of Movies that are in the top 250 and displaying revelant details related to that.</p>
+    
+    <div class="card-action-links">
+        <a href="{{ url_for('viewer', file='imdb_top250.csv', title='imdb top 250 movies') }}" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+                      <a href="{{ url_for('static', filename='Notebooks/Imdb Top250.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://www.imdb.com/chart/top/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+        
+        <div class="subpage-footer">
+            <p>© 2026 Web Scraping Tutorials</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,64 @@
+/* ===================== DATA TABLE STYLES ===================== */
+
+.table-section {
+    min-height: 100vh;
+    background-color: #0F172A;
+}
+
+.table-container {
+    background: rgba(30, 41, 59, 0.7); /* Deep slate background */
+    border-radius: 15px;
+    overflow: hidden; /* Ensures the table corners stay rounded */
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 30px;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #F8FAFC;
+    font-size: 0.95rem;
+}
+
+.styled-table thead tr {
+    background-color: #0891B2; /* Cyan header from screenshot */
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Zebra striping for rows */
+.styled-table tbody tr {
+    background-color: rgba(255, 255, 255, 0.02);
+    transition: background-color 0.2s ease;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.styled-table tbody tr:hover {
+    background-color: rgba(56, 189, 248, 0.1); /* Subtle blue hover */
+}
+
+/* --- Pill Badges --- */
+.badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Color Coding based on text */
+.badge-one { background-color: #EF4444; } /* Red */
+.badge-two, .badge-three { background-color: #EAB308; } /* Yellow */
+.badge-four, .badge-five { background-color: #22C55E; } /* Green */
+.badge-instock { background-color: #22C55E; } /* Green */

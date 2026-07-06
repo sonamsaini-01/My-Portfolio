@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section id="projects" class="projects-section">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 60px 20px;">
+        
+        <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 2.5rem; color: #ffffff; margin-bottom: 10px;">Project Categories</h2>
+            <p style="color: #cbd5e1; font-size: 1.1rem;">Explore the different projects covered by me.</p>
+        </div>
+
+        <div class="projects-grid image-match-layout">
+
+            
+            <div class="project-card text-center">
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Web Scraping</h3>
+                <p>Learn BeautifulSoup, Requests and Selenium to scrape websites and automate data collection.</p>
+                <a href="{{ url_for('scraping') }}" class="view-details-btn">View Details</a>
+            </div>
+
+            <div class="project-card text-center">
+                <div class="icon-wrapper">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Minor Project 1</h3>
+                <p>coming soon.</p>
+                <a href="#" class="view-details-btn">View Details</a>
+            </div>
+
+            <div class="project-card text-center">
+                <div class="icon-wrapper">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <h3>Minor Project 2</h3>
+                <p>coming soon.</p>
+                <a href="#" class="view-details-btn">View Details</a>
+            </div>
+
+            <div class="project-card text-center">
+                <div class="icon-wrapper">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Major Project</h3>
+                <p>coming soon.</p>
+                <a href="#" class="view-details-btn">View Details</a>
+            </div>
+
+            <div class="project-card text-center">
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Major Project 2</h3>
+                <p>Coming soon.</p>
+                <a href="{{ url_for('scraping') }}" class="view-details-btn">View Details</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

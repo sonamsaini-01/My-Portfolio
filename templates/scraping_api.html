@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/scraping_static.css') }}">
+
+<section class="scraping-subpage">
+    <div class="subpage-banner">
+        <div class="container">
+            <h1 class="banner-title">API Scraping</h1>
+            <p class="banner-subtitle">Websites scraped using Requests + Pandas +cURL + API.</p>
+        </div>
+    </div>
+
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px;">
+        <div class="static-grid">
+
+            
+            <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-globe"></i>
+    </div>
+    <h3>Autolist Tesla</h3>
+    <p>An Automobile site for pricing, models and other useful details for various vehicles.</p>
+    
+    <div class="card-action-links">
+        <a href="{{ url_for('viewer', file='tesla_autolist.csv', title='Tesla Autolist') }}" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        
+        <div class="secondary-links"> 
+                
+            <a href="{{ url_for('static', filename='Notebooks/API_AutolistTesla.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://www.autolist.com/listings#city=San%20Francisco&latitude=37.7749295&limit=20&longitude=-122.4194155&makes[]=Tesla&page=1&radius=100&state=CA" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+           <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-briefcase"></i>
+    </div>
+    <h3>CodroidHub Universities List</h3>
+    <p>search and display universities information including names, countries and domians from gyan setu website of codroidHubhub pvt ltd.</p>
+    
+    <div class="card-action-links">
+  <a href="{{ url_for('viewer', file='universitiesapi.csv', title='Tesla Autolist') }}" class="pill-btn primary-pill">
+    <i class="fas fa-table"></i> 
+    View Data Set
+</a>
+        <div class="secondary-links">
+                       <a href="{{ url_for('static', filename='Notebooks/API_CodroidHub_universities.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://gyansetu.codroidhub.com/universities" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-film"></i>
+    </div>
+    <h3>Json Placeholder</h3>
+    <p>Fetch and display posts, users, comments, albums and other sample REST data.</p>
+    
+    <div class="card-action-links">
+        <a href="{{ url_for('viewer', file='apiposts.csv', title='Json Placeholder') }}" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+            <a href="{{ url_for('static', filename='Notebooks/API_JsonPlaceholder.html') }}" target="_blank" class="pill-btn secondary-pill">
+                <i class="fab fa-python"></i> Notebook
+            </a>
+            <a href="https://jsonplaceholder.typicode.com/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+
+            <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fab fa-shopping-cart"></i>
+    </div>
+    <h3>Fake Store API</h3>
+    <p>Browse products,categories , prices and ratings from an e-commerce API.</p>
+    
+    <div class="card-action-links">
+        <a href="{{ url_for('viewer', file='fakestore_products.csv', title='Fakestore Products') }}" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+           <a href="{{ url_for('static', filename='Notebooks/API_Fakestore.html') }}" target="_blank" class="pill-btn secondary-pill">
+                <i class="fab fa-python"></i> Notebook
+            </a>
+            <a href="https://fakestoreapi.com/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-laptop"></i>
+    </div>
+    <h3>Dummy Json</h3>
+    <p>Practice website designed to practice api scraping at real time.</p>
+    
+    <div class="card-action-links">
+        <a href="{{ url_for('viewer', file='dummyjson_products.csv', title='Fakestore Products') }}" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+                      <a href="{{ url_for('static', filename='Notebooks/API_DummyJson.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://dummyjson.com/products" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+        </div>
+        
+        <div class="subpage-footer">
+            <p>© 2026 Web Scraping Tutorials</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

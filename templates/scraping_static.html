@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/scraping_static.css') }}">
+
+<section class="scraping-subpage">
+    <div class="subpage-banner">
+        <div class="container">
+            <h1 class="banner-title">Static Website Scraping</h1>
+            <p class="banner-subtitle">Websites scraped using Requests + BeautifulSoup.</p>
+        </div>
+    </div>
+
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px 80px;">
+        <div class="static-grid">
+
+            
+            <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-globe"></i>
+    </div>
+    <h3>Books To Scrape</h3>
+    <p>Practice website for scraping books.</p>
+    
+    <div class="card-action-links">
+        <a href="{{ url_for('books_to_scrape') }}" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        
+        <div class="secondary-links"> 
+                
+            <a href="{{ url_for('static', filename='Notebooks/books_notebook.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://books.toscrape.com/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+           <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-shopping-cart"></i>
+    </div>
+    <h3>Quotes To Scrape</h3>
+    <p>Practice website for scraping quotes.</p>
+    
+    <div class="card-action-links">
+  <a href="/viewer?file=quotes_to_scrape.csv&title=Quotes+To+Scrape" class="pill-btn primary-pill">
+    <i class="fas fa-table"></i> 
+    View Data Set
+</a>
+        <div class="secondary-links">
+                       <a href="{{ url_for('static', filename='Notebooks/quotes_notebook.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://quotes.toscrape.com/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+        
+
+<div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-film"></i>
+    </div>
+    <h3>WorldOMeter</h3>
+    <p>Scraping of Countries in the world by population.</p>
+    
+    <div class="card-action-links">
+        <a href="/viewer?file=world_population_by_country.csv&title=World+Population" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+            <a href="{{ url_for('static', filename='Notebooks/population.html') }}" target="_blank" class="pill-btn secondary-pill">
+                <i class="fab fa-python"></i> Notebook
+            </a>
+            <a href="https://www.worldometers.info/world-population/population-by-country/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-globe"></i>
+    </div>
+    <h3>Good Read quotes</h3>
+    <p>Scraping website in which we can scrape quotes of big personalities with their good names.</p>
+    
+    <div class="card-action-links">
+        <a href="/viewer?file=Good Reads Quotes.csv&title=World+Population" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+            <a href="{{ url_for('static', filename='Notebooks/Goodreadquote.html') }}" target="_blank" class="pill-btn secondary-pill">
+                <i class="fab fa-python"></i> Notebook
+            </a>
+            <a href="https://www.goodreads.com/quotes" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+            <div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fab fa-wikipedia-w"></i>
+    </div>
+    <h3>Wikipedia Largest Companies List</h3>
+    <p>Collect structured Scraping of Top companies by revenue, profit and employee's size in the world.</p>
+    
+    <div class="card-action-links">
+        <a href="/viewer?file=largest_companies_by_revenue.csv&title=Largest+Companies" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+           <a href="{{ url_for('static', filename='Notebooks/Wikipedia.html') }}" target="_blank" class="pill-btn secondary-pill">
+                <i class="fab fa-python"></i> Notebook
+            </a>
+            <a href="https://en.wikipedia.org/wiki/List_of_largest_companies_by_revenue" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-laptop"></i>
+    </div>
+    <h3>Amazon Laptops</h3>
+    <p>Trending DataSets of laptops in the product section of Amazon.</p>
+    
+    <div class="card-action-links">
+        <a href="/viewer?file=webscrap_amazon_laptops.csv&title=Amazon+Laptops" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+                      <a href="{{ url_for('static', filename='Notebooks/Amazon_Laptops.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://www.amazon.in/s?k=laptop&crid=YLH7SZQM1WE6&sprefix=laptop%2Caps%2C610&ref=nb_sb_noss_2" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="glass-card text-center">
+    <div class="icon-wrapper">
+        <i class="fas fa-briefcase"></i>
+    </div>
+    <h3>Fake Jobs</h3>
+    <p>Job listings and company details.</p>
+    
+    <div class="card-action-links">
+        <a href="/viewer?file=jobs_data.csv&title=Fake+Jobs" class="pill-btn primary-pill">
+            <i class="fas fa-table"></i> View Data Set
+        </a>
+        <div class="secondary-links">
+            <a href="{{ url_for('static', filename='Notebooks/fake_job.html') }}" target="_blank" class="pill-btn secondary-pill">
+    <i class="fab fa-python"></i> Notebook
+</a>
+            <a href="https://realpython.github.io/fake-jobs/" target="_blank" class="pill-btn secondary-pill">
+                <i class="fas fa-external-link-alt"></i> Website
+            </a>
+        </div>
+    </div>
+</div>
+
+        </div>
+        
+        <div class="subpage-footer">
+            <p>© 2026 Web Scraping Tutorials</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

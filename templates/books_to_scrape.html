@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/books_to_scrape.css') }}">
+<section class="table-section">
+    <div class="container" style="max-width: 1000px; margin: 80px auto; padding: 20px;">
+        
+        <div class="table-container glass-card">
+            <div class="table-header text-center">
+                <h2 style="color: #38BDF8; font-size: 2rem; margin-bottom: 20px;">Books To Scrape</h2>
+            </div>
+            
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Book Title</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for book in books %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td style="font-weight: 500;">{{ book.title }}</td>
+                        <td>{{ book.price }}</td>
+                        <td>
+                            <span class="badge badge-{{ book.rating | lower }}">{{ book.rating }}</span>
+                        </td>
+                        <td>
+                            <span class="badge badge-instock">{{ book.availability }}</span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/scraping.css') }}">
+
+<section class="scraping-page">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 120px 20px 80px;">
+        
+        <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+            <h1 style="font-size: 3.5rem; color: #ffffff; margin-bottom: 15px; font-weight: 700;">Web Scraping</h1>
+            <p style="color: #cbd5e1; font-size: 1.2rem;">Learn different techniques for extracting data from websites.</p>
+        </div>
+
+        <div class="scraping-grid">
+
+            <div class="glass-card text-center">
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Static Scraping</h3>
+                <p>Scrape HTML pages using Requests and BeautifulSoup. Ideal for websites whose content is already present in the page source.</p>
+                <a href="{{ url_for('scraping_static') }}" class="pill-btn">Learn Static</a>
+            </div>
+
+            <div class="glass-card text-center">
+                <div class="icon-wrapper">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Dynamic Scraping</h3>
+                <p>Scrape JavaScript rendered websites using Selenium. Handle login pages, scrolling, clicking and automation.</p>
+                <a href="{{ url_for('scraping_dynamic') }}" class="pill-btn">Learn Dynamic</a>
+            </div>
+
+            <div class="glass-card text-center">
+                <div class="icon-wrapper">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>API Scraping</h3>
+                <p>Fetch structured JSON data from REST APIs using Python Requests and process the response efficiently.</p>
+                <a href="{{ url_for('scraping_api') }}" class="pill-btn">Learn API</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

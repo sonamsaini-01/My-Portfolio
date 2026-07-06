@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Viewer</title>
+    <!-- PapaParse Library for reading CSV files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <style>
+        body {
+            background-color: #0b1120; /* Dark background from screenshot */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .table-container {
+            background-color: #1a365d; /* Dark blue container */
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #00e5ff; /* Cyan title */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00d4ff; /* Bright cyan header */
+            color: #0b1120;
+            padding: 15px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* Rounding the top corners of the header row */
+        th:first-child { border-top-left-radius: 8px; }
+        th:last-child { border-top-right-radius: 8px; }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+        }
+
+        /* Alternating row colors for readability */
+        tr:nth-child(even) td {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        tr:hover td {
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+        
+        .loading {
+            text-align: center;
+            color: #00e5ff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <h1 id="dataset-title">Loading Dataset...</h1>
+        <div id="table-wrapper">
+            <p class="loading">Fetching CSV data...</p>
+        </div>
+    </div>
+
+    <script>
+        // 1. Get the file name and title from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const fileName = urlParams.get('file');
+        const title = urlParams.get('title');
+
+        // 2. Set the Title on the page
+        if (title) {
+            document.getElementById('dataset-title').innerText = title;
+        }
+
+        // 3. Fetch and Parse the CSV
+        if (fileName) {
+            // Note: If using Flask, ensure this path aligns with your static folder structure (e.g., '/static/datasets/')
+            const filePath = `/static/datasets/${fileName}`;
+
+            Papa.parse(filePath, {
+                download: true,
+                header: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    const data = results.data;
+                    
+                    if (data.length === 0) {
+                        document.getElementById('table-wrapper').innerHTML = "<p>No data found in this file.</p>";
+                        return;
+                    }
+
+                    // 4. Build the HTML Table
+                    let tableHTML = '<table><thead><tr>';
+                    
+                    // Add Row Number Column Header
+                    tableHTML += `<th>#</th>`;
+
+                    // Generate Table Headers dynamically from CSV keys
+                    const headers = Object.keys(data[0]);
+                    headers.forEach(header => {
+                        tableHTML += `<th>${header}</th>`;
+                    });
+                    tableHTML += '</tr></thead><tbody>';
+
+                    // Generate Table Rows
+                    data.forEach((row, index) => {
+                        tableHTML += `<tr>`;
+                        tableHTML += `<td><strong>${index + 1}</strong></td>`; // Row number
+                        
+                        headers.forEach(header => {
+                            tableHTML += `<td>${row[header]}</td>`;
+                        });
+                        tableHTML += `</tr>`;
+                    });
+
+                    tableHTML += '</tbody></table>';
+
+                    // Inject the table into the page
+                    document.getElementById('table-wrapper').innerHTML = tableHTML;
+                },
+                error: function(err) {
+                    document.getElementById('table-wrapper').innerHTML = `<p style="color:red;">Error loading file: ${err.message}. Make sure you are running a local server.</p>`;
+                }
+            });
+        } else {
+            document.getElementById('dataset-title').innerText = "No Dataset Selected";
+            document.getElementById('table-wrapper').innerHTML = "<p>Please select a dataset from the main page.</p>";
+        }
+    </script>
+</body>
+</html>

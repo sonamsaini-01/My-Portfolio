@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sonam | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <a href="{{ url_for('home') }}">Sonam</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('education') }}">Education</a></li>
+            <li><a href="{{ url_for('skills') }}">Skills</a></li>
+            <li><a href="{{ url_for('projects') }}">Projects</a></li>
+            <li><a href="{{ url_for('certificates') }}">Certificates</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+
+    </nav>
+
+</header>
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>Sonam</h2>
+
+        <p>
+            Computer Science Engineering Student |
+            AI Enthusiast |
+            Python Developer
+        </p>
+
+        <div class="social-icons">
+
+            <a href="https://github.com/sonamsaini-01">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/sonam-saini-047436326/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="sonamsaini045@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+        </div>
+
+        <p>© 2026 Sonam. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}?v=1"></script>
+<script src="{{ url_for('static', filename='js/animation.js') }}"></script>
+
+</body>
+
+</html>

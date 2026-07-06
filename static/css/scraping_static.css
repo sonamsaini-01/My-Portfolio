@@ -1,0 +1,183 @@
+/* ===================== STATIC SCRAPING SUB-PAGE ===================== */
+
+.scraping-subpage {
+    min-height: 100vh;
+    background-color: #0F172A;
+    padding-top: 80px; /* Accounts for navbar */
+}
+
+/* Wide Banner Header */
+.subpage-banner {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+    margin-bottom: 40px;
+}
+
+.banner-title {
+    font-size: 3rem;
+    color: #38BDF8; /* Matches the vibrant blue in screenshot */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.banner-subtitle {
+    color: #F8FAFC;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* 4-Column Grid */
+.static-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Reusing the Glassmorphism styling */
+.static-grid .glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 15px;
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.static-grid .glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.5);
+}
+
+/* Shared Icon Styling */
+.static-grid .icon-wrapper {
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.8), rgba(99, 102, 241, 0.8));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.static-grid h3 {
+    font-size: 1.2rem;
+    color: #F8FAFC;
+    margin-bottom: 15px;
+}
+
+.static-grid p {
+    color: #94A3B8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Keeps buttons aligned at the bottom */
+}
+
+/* Matching Pill Button */
+.pill-btn {
+    background: transparent;
+    color: #38BDF8;
+    border: 1px solid #38BDF8;
+    padding: 8px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pill-btn:hover {
+    background: #38BDF8;
+    color: #0F172A;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+/* Custom Footer for this page */
+.subpage-footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #F8FAFC;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .static-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .static-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================== 3-LINK CARD LAYOUT ===================== */
+
+.card-action-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px; /* Adds space between the paragraph and buttons */
+}
+
+.secondary-links {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Base Pill Button adjustments to fill width */
+.card-action-links .pill-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Primary Focus Button (View Data Set) */
+.primary-pill {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38BDF8;
+    border: 1px solid #38BDF8;
+}
+
+.primary-pill:hover {
+    background: #38BDF8;
+    color: #0F172A;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+/* Secondary Actions (Notebook & Website) */
+.secondary-pill {
+    background: transparent;
+    color: #94A3B8; /* Muted gray/blue */
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.secondary-pill:hover {
+    background: rgba(148, 163, 184, 0.1);
+    color: #F8FAFC;
+    border-color: #F8FAFC;
+}
