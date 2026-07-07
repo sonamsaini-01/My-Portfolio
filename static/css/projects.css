@@ -83,6 +83,24 @@
     }
 }
 
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 40px 16px;
+    }
+
+    .image-match-layout {
+        gap: 18px;
+    }
+
+    .image-match-layout .project-card {
+        padding: 28px 18px;
+    }
+
+    .image-match-layout h3 {
+        font-size: 1.15rem;
+    }
+}
+
 @media (max-width: 600px) {
     .image-match-layout {
         grid-template-columns: 1fr;

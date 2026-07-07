@@ -32,18 +32,35 @@ if(menuBtn){
 // CLOSE MENU AFTER CLICK
 // ===============================
 
+function closeMobileMenu(){
+    if(navLinks){
+        navLinks.classList.remove("active");
+    }
+    if(menuBtn){
+        menuBtn.innerHTML='<i class="fas fa-bars"></i>';
+    }
+}
+
 document.querySelectorAll(".nav-links a").forEach(link=>{
 
-    link.addEventListener("click",()=>{
+    link.addEventListener("click",closeMobileMenu);
 
-        navLinks.classList.remove("active");
+});
 
-        if(menuBtn){
-            menuBtn.innerHTML='<i class="fas fa-bars"></i>';
-        }
+// Close menu when tapping outside the panel
+document.addEventListener("click",(e)=>{
 
-    });
+    if(!navLinks || !navLinks.classList.contains("active")) return;
 
+    if(!navLinks.contains(e.target) && !menuBtn.contains(e.target)){
+        closeMobileMenu();
+    }
+
+});
+
+// Close menu on ESC
+document.addEventListener("keydown",(e)=>{
+    if(e.key==="Escape") closeMobileMenu();
 });
 
 
@@ -221,23 +238,31 @@ buttons.forEach(btn=>{
 
 
 // ===============================
-// IMAGE PARALLAX EFFECT
+// IMAGE PARALLAX EFFECT (desktop / fine pointers only)
 // ===============================
 
 const heroImage=document.querySelector(".image-wrapper");
 
-window.addEventListener("mousemove",(e)=>{
+// Skip the parallax on touch devices and small screens — it interferes
+// with scrolling and there's no cursor to follow.
+const isFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-    if(heroImage){
+if(isFinePointer && window.innerWidth > 768){
 
-        const x=(window.innerWidth/2-e.pageX)/40;
-        const y=(window.innerHeight/2-e.pageY)/40;
+    window.addEventListener("mousemove",(e)=>{
 
-        heroImage.style.transform=`translate(${x}px,${y}px)`;
+        if(heroImage){
 
-    }
+            const x=(window.innerWidth/2-e.pageX)/40;
+            const y=(window.innerHeight/2-e.pageY)/40;
 
-});
+            heroImage.style.transform=`translate(${x}px,${y}px)`;
+
+        }
+
+    });
+
+}
 
 
 // ===============================

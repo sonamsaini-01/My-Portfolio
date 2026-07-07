@@ -86,6 +86,27 @@
     }
 }
 
+@media (max-width: 768px) {
+    .scraping-grid {
+        gap: 20px;
+    }
+
+    .scraping-grid .glass-card {
+        padding: 32px 20px;
+    }
+
+    .scraping-grid .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .scraping-grid h3 {
+        font-size: 1.25rem;
+    }
+}
+
 @media (max-width: 600px) {
     .scraping-grid {
         grid-template-columns: 1fr;

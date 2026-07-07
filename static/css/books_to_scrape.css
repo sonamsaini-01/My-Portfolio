@@ -5,6 +5,22 @@
     background-color: #0F172A;
 }
 
+.books-container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.books-title {
+    color: #38BDF8;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.book-title-cell {
+    font-weight: 500;
+}
+
 .table-container {
     background: rgba(30, 41, 59, 0.7); /* Deep slate background */
     border-radius: 15px;
@@ -13,11 +29,20 @@
     padding: 30px;
 }
 
+/* Wrap the table so it scrolls horizontally on small screens
+   instead of blowing out the page width. */
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 .styled-table {
     width: 100%;
     border-collapse: collapse;
     color: #F8FAFC;
     font-size: 0.95rem;
+    min-width: 600px; /* Prevent columns from crushing on mobile */
 }
 
 .styled-table thead tr {
@@ -62,3 +87,55 @@
 .badge-two, .badge-three { background-color: #EAB308; } /* Yellow */
 .badge-four, .badge-five { background-color: #22C55E; } /* Green */
 .badge-instock { background-color: #22C55E; } /* Green */
+
+/* ---------- Mobile ---------- */
+@media screen and (max-width: 768px) {
+
+    .table-container {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .styled-table {
+        font-size: 0.85rem;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 14px;
+        white-space: nowrap;
+    }
+
+    .badge {
+        padding: 3px 10px;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .books-container {
+        margin: 90px auto 40px;
+        padding: 12px;
+    }
+
+    .books-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .table-container {
+        padding: 12px;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 10px 12px;
+    }
+
+    .books-title {
+        font-size: 1.35rem;
+    }
+}

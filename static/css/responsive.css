@@ -115,13 +115,15 @@
 
     .nav-links{
 
+        display:flex;
+
         position:fixed;
 
         top:75px;
         right:-100%;
 
         width:260px;
-        height:100vh;
+        height:calc(100vh - 75px);
 
         background:#111827;
 
@@ -129,19 +131,67 @@
 
         justify-content:flex-start;
 
-        align-items:center;
+        align-items:stretch;
 
-        gap:35px;
+        gap:0;
 
-        padding-top:50px;
+        padding:30px 0;
 
-        transition:.4s;
+        transition:right .4s ease;
+
+        box-shadow:-10px 0 30px rgba(0,0,0,.4);
+
+        z-index:999;
+
+    }
+
+    .nav-links li{
+
+        width:100%;
+
+    }
+
+    .nav-links li a{
+
+        display:block;
+
+        padding:14px 30px;
+
+        font-size:17px;
+
+        border-left:3px solid transparent;
+
+        transition:.25s;
+
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active{
+
+        background:rgba(56,189,248,.08);
+        border-left-color:var(--accent);
+        color:var(--accent);
 
     }
 
     .nav-links.active{
 
         right:0;
+
+    }
+
+    /* Ensure hero clears the fixed navbar on mobile */
+    .hero{
+
+        padding-top:110px;
+        padding-bottom:60px;
+
+    }
+
+    /* Scroll-down under the hero, spaced from the content */
+    .scroll-down{
+
+        margin-top:30px;
 
     }
 
@@ -377,4 +427,156 @@
 
     }
 
+}
+
+
+/*==========================================
+        EXTRA MOBILE POLISH
+==========================================*/
+
+/* Never let anything overflow the viewport width */
+html,body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
+@media screen and (max-width:768px){
+
+    /* Push page content below the fixed navbar (75px on mobile) */
+    main{
+        padding-top:0;
+    }
+
+    /* Sub-page banner + navbar spacing */
+    .scraping-subpage{
+        padding-top:75px;
+    }
+
+    /* Footer tightens up */
+    footer{
+        padding:40px 16px;
+    }
+
+    .footer-content h2{
+        font-size:26px;
+    }
+
+    .footer-content p{
+        font-size:14px;
+    }
+
+    /* Nav menu links tap targets */
+    .nav-links li a{
+        display:block;
+        padding:8px 20px;
+        font-size:17px;
+    }
+}
+
+
+@media screen and (max-width:576px){
+
+    /* Global section padding – tighter side gutters on phones */
+    section{
+        padding:60px 16px;
+    }
+
+    .navbar{
+        width:94%;
+    }
+
+    .logo a{
+        font-size:26px;
+    }
+
+    /* Hero image scales down one more step */
+    .image-wrapper{
+        width:220px;
+        height:220px;
+        border-width:4px;
+    }
+
+    .hero-description{
+        font-size:14px;
+        line-height:1.75;
+    }
+
+    .hero-socials a{
+        width:48px;
+        height:48px;
+        font-size:20px;
+    }
+
+    /* Timeline – shrink the icon rail so text has room */
+    .timeline::before{
+        left:20px;
+    }
+
+    .timeline-item{
+        padding-left:60px;
+    }
+
+    .timeline-icon{
+        width:42px;
+        height:42px;
+        font-size:16px;
+    }
+
+    /* Contact form spacing */
+    .contact-form{
+        padding:20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        padding:14px 15px;
+        font-size:15px;
+    }
+
+    /* Footer icons */
+    .footer-content .social-icons a{
+        width:44px;
+        height:44px;
+    }
+}
+
+
+/* Very small phones (≤360px) */
+@media screen and (max-width:360px){
+
+    .hero-title{
+        font-size:28px;
+    }
+
+    .section-title h2{
+        font-size:24px;
+    }
+
+    .image-wrapper{
+        width:190px;
+        height:190px;
+    }
+
+    .logo a{
+        font-size:22px;
+    }
+}
+
+
+/* Scroll-to-top button (created in main.js) – shrink on phones */
+@media screen and (max-width:576px){
+
+    .scrollTop{
+        width:42px !important;
+        height:42px !important;
+        bottom:20px !important;
+        right:20px !important;
+        font-size:16px !important;
+    }
 }

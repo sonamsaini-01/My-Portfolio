@@ -333,8 +333,10 @@ header{
     min-height:100vh;
 
     display:flex;
+    flex-direction:column;
+    justify-content:center;
 
-    align-items:center;
+    align-items:stretch;
 
 }
 
@@ -1153,12 +1155,6 @@ margin-bottom:40px;
 }
 
 @media(max-width:768px){
-
-.nav-links{
-
-display:none;
-
-}
 
 .menu-btn{
 
