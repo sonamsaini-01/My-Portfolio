@@ -12,11 +12,17 @@ const navLinks = document.querySelector(".nav-links");
 
 if(menuBtn){
 
-    menuBtn.addEventListener("click",()=>{
+    menuBtn.addEventListener("click",(e)=>{
+
+        // Stop the click from bubbling to the document's "close on outside
+        // click" handler. Without this the icon swap below removes the
+        // click target from the DOM, the document handler thinks the click
+        // was outside the menu, and immediately closes it again.
+        e.stopPropagation();
 
         navLinks.classList.toggle("active");
 
-        if(menuBtn.innerHTML.includes("bars")){
+        if(navLinks.classList.contains("active")){
             menuBtn.innerHTML='<i class="fas fa-times"></i>';
         }
         else{

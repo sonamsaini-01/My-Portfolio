@@ -57,6 +57,10 @@ def scraping_api():
 def scraping_dynamic():
     return render_template("scraping_dynamic.html")
 
+@app.route("/.well-known/appspecific/com.chrome.devtools.json")
+def chrome_devtools_probe():
+    return "", 204
+
 
 if __name__ == "__main__":
     app.run(debug=True)
