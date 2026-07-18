@@ -4,18 +4,37 @@
 
 <section id="projects" class="projects-section">
     <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 60px 20px;">
-        
+
+        <!-- ===================== CATEGORY 1: FEATURED PROJECTS ===================== -->
         <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-            <h2 style="font-size: 2.5rem; color: #ffffff; margin-bottom: 10px;">Project Categories</h2>
-            <p style="color: #cbd5e1; font-size: 1.1rem;">Explore the different projects covered by me.</p>
+            <h2 style="font-size: 2.5rem; color: #ffffff; margin-bottom: 10px;">Featured Projects</h2>
+            <p style="color: #cbd5e1; font-size: 1.1rem;">End-to-end solutions showcasing real-world problem solving, full-stack development, and AI-driven innovation.</p>
+        </div>
+
+        <div class="projects-grid image-match-layout featured-grid">
+            {% for slug, project in featured.items() %}
+            <a href="{{ url_for('project_detail', slug=slug) }}" class="project-card text-center featured-card">
+                <div class="icon-wrapper emoji-icon">
+                    <span>{{ project.emoji }}</span>
+                </div>
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.tagline }}</p>
+                <span class="view-details-btn">View Project</span>
+            </a>
+            {% endfor %}
+        </div>
+
+        <!-- ===================== CATEGORY 2: SKILL-BASED PROJECTS ===================== -->
+        <div class="section-header" style="text-align: center; margin: 80px 0 50px;">
+            <h2 style="font-size: 2.5rem; color: #ffffff; margin-bottom: 10px;">Skill-Based Projects</h2>
+            <p style="color: #cbd5e1; font-size: 1.1rem;">Hands-on implementations showcasing technical concepts, tools, algorithms, and practical problem-solving across multiple domains.</p>
         </div>
 
         <div class="projects-grid image-match-layout">
 
-            
             <div class="project-card text-center">
-                <div class="icon-wrapper">
-                    <i class="fas fa-project-diagram"></i>
+                <div class="icon-wrapper emoji-icon">
+                    <span>🌐</span>
                 </div>
                 <h3>Web Scraping</h3>
                 <p>Learn BeautifulSoup, Requests and Selenium to scrape websites and automate data collection.</p>
@@ -23,39 +42,66 @@
             </div>
 
             <div class="project-card text-center">
-                <div class="icon-wrapper">
-                    <i class="fas fa-rocket"></i>
+                <div class="icon-wrapper emoji-icon">
+                    <span>📊</span>
                 </div>
-                <h3>Minor Project 1</h3>
-                <p>coming soon.</p>
+                <h3>Power BI Dashboards</h3>
+                <p>Interactive dashboards and reports built in Power BI to turn raw data into visual insights.</p>
                 <a href="#" class="view-details-btn">View Details</a>
             </div>
 
             <div class="project-card text-center">
-                <div class="icon-wrapper">
-                    <i class="fas fa-laptop"></i>
+                <div class="icon-wrapper emoji-icon">
+                    <span>🤖</span>
                 </div>
-                <h3>Minor Project 2</h3>
-                <p>coming soon.</p>
+                <h3>Machine Learning Use Cases</h3>
+                <p>Practical ML models applied to real-world problems like prediction and classification.</p>
                 <a href="#" class="view-details-btn">View Details</a>
             </div>
 
             <div class="project-card text-center">
-                <div class="icon-wrapper">
-                    <i class="fas fa-trophy"></i>
+                <div class="icon-wrapper emoji-icon">
+                    <span>📈</span>
                 </div>
-                <h3>Major Project</h3>
-                <p>coming soon.</p>
+                <h3>Data Analysis with Pandas</h3>
+                <p>Analysing datasets with Pandas — grouping, aggregation, merging and insight extraction.</p>
                 <a href="#" class="view-details-btn">View Details</a>
             </div>
 
             <div class="project-card text-center">
-                <div class="icon-wrapper">
-                    <i class="fas fa-globe"></i>
+                <div class="icon-wrapper emoji-icon">
+                    <span>🔍</span>
                 </div>
-                <h3>Major Project 2</h3>
-                <p>Coming soon.</p>
-                <a href="{{ url_for('scraping') }}" class="view-details-btn">View Details</a>
+                <h3>Exploratory Data Analysis (EDA)</h3>
+                <p>Discovering patterns, trends and relationships in data using visualisation and statistics.</p>
+                <a href="#" class="view-details-btn">View Details</a>
+            </div>
+
+            <div class="project-card text-center">
+                <div class="icon-wrapper emoji-icon">
+                    <span>🧹</span>
+                </div>
+                <h3>Data Cleaning</h3>
+                <p>Handling missing values, duplicates and inconsistent data to prepare clean datasets.</p>
+                <a href="#" class="view-details-btn">View Details</a>
+            </div>
+
+            <div class="project-card text-center">
+                <div class="icon-wrapper emoji-icon">
+                    <span>🧠</span>
+                </div>
+                <h3>ML Algorithm Comparison</h3>
+                <p>Comparing algorithms like Logistic Regression, Random Forest and SVM on the same dataset.</p>
+                <a href="#" class="view-details-btn">View Details</a>
+            </div>
+
+            <div class="project-card text-center">
+                <div class="icon-wrapper emoji-icon">
+                    <span>🔌</span>
+                </div>
+                <h3>API Integration</h3>
+                <p>Working with Gemini and REST APIs — fetching, processing and integrating external data.</p>
+                <a href="#" class="view-details-btn">View Details</a>
             </div>
 
         </div>

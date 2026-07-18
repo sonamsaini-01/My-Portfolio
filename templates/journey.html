@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<!-- ===================== MY JOURNEY SECTION ===================== -->
+
+<section id="journey" class="certificates section">
+
+    <div class="section-title">
+        <span>My Story</span>
+        <h2>My Journey</h2>
+        <p>
+            The milestones that shaped me — from writing my first line of
+            code to building real-world projects.
+        </p>
+    </div>
+
+    <div class="certificate-container">
+
+        <!-- Journey 1 -->
+        
+        <div class="certificate-card">
+
+            <i class="fas fa-briefcase certificate-icon"></i>
+
+            <h3>Intern at Codroid Hub</h3>
+
+            <p>
+                Working as an Aiml intern at Codroid Hub, growing week by week
+                through hands-on tasks, real projects, and mentorship.
+            </p>
+
+            <a href="{{ url_for('internship') }}" class="certificate-btn">
+                See Internship Journey
+            </a>
+
+        </div>
+
+
+        <!-- Journey 1b: B.Tech Roadmap -->
+
+        <div class="certificate-card">
+
+            <i class="fas fa-graduation-cap certificate-icon"></i>
+
+            <h3>B.Tech Journey</h3>
+
+            <p>
+                My semester-by-semester journey through Computer Science
+                Engineering — from my first C program to AI, ML and
+                real-world projects.
+            </p>
+
+            <a href="{{ url_for('btech_journey') }}" class="certificate-btn">
+                See B.Tech Journey
+            </a>
+
+        </div>
+
+        <!-- Journey 1c: School Days -->
+
+        <div class="certificate-card">
+
+            <i class="fas fa-school certificate-icon"></i>
+
+            <h3>School Days</h3>
+
+            <p>
+                From Class 10 to Senior Secondary — the achievements,
+                memories and moments that gave me my first spark for
+                technology.
+            </p>
+
+            <a href="{{ url_for('school_journey') }}" class="certificate-btn">
+                See School Journey
+            </a>
+
+        </div>
+
+
+        <!-- Journey 2 -->
+
+        <div class="certificate-card">
+
+            <i class="fab fa-python certificate-icon"></i>
+
+            <h3>Falling for Python</h3>
+
+            <p>
+                Learned Python and fell in love with problem solving —
+                from basics to building scrapers, automations, and
+                data-driven projects.
+            </p>
+
+        </div>
+
+        <!-- Journey 3 -->
+
+        <div class="certificate-card">
+
+            <i class="fas fa-code certificate-icon"></i>
+
+            <h3>Web Development</h3>
+
+            <p>
+                Explored HTML, CSS, JavaScript, and Flask to bring ideas
+                to life on the web — including this very portfolio you
+                are browsing right now.
+            </p>
+
+        </div>
+
+        <!-- Journey 4 -->
+
+        <div class="certificate-card">
+
+            <i class="fas fa-users certificate-icon"></i>
+
+            <h3>Hackathons &amp; Teamwork</h3>
+
+            <p>
+                Competed in hackathons like Elite Her and RockVerse,
+                learning to collaborate under pressure and turn ideas
+                into working prototypes.
+            </p>
+
+        </div>
+
+        <!-- Journey 5 -->
+
+          <div class="certificate-card">
+
+            <i class="fas fa-seedling certificate-icon"></i>
+
+            <h3>The Beginning</h3>
+
+            <p>
+                Started my Computer Science Engineering journey, discovering
+                my curiosity for technology and writing my very first
+                lines of code.
+            </p>
+
+        </div>
+        <!-- Journey 6 -->
+
+        <div class="certificate-card">
+
+            <i class="fas fa-rocket certificate-icon"></i>
+
+            <h3>What's Next</h3>
+
+            <p>
+                Diving deeper into AI and cybersecurity, building bigger
+                projects, and working toward becoming a well-rounded
+                developer.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

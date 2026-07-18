@@ -1,0 +1,309 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/roadmap.css') }}?v=2">
+
+<!-- ===================== INTERNSHIP ROADMAP SECTION ===================== -->
+
+<section id="internship-roadmap" class="section">
+
+    <div class="section-title">
+        <span>Internship</span>
+        <h2>Codroid Hub Journey</h2>
+        <p>
+            My six-week learning journey at Codroid Hub, where I explored
+            Artificial Intelligence, Machine Learning, Web Development,
+            Data Analytics, and Generative AI through hands-on projects.
+            Click on any week to explore my learning.
+        </p>
+
+        <a href="{{ url_for('journey') }}" class="certificate-btn roadmap-back">
+            <i class="fas fa-arrow-left"></i> Back to My Journey
+        </a>
+    </div>
+
+    <div class="roadmap">
+
+        <div class="roadmap-line"></div>
+
+        <!-- ================= WEEK 1 ================= -->
+
+        <div class="roadmap-item left">
+            <div class="roadmap-node">1</div>
+
+            <div class="week-card">
+                <h3>Week 1 – Introduction to AI <i class="fas fa-chevron-down"></i></h3>
+
+                                <div class="week-details">
+
+                    <div class="detail-heading">
+                        <i class="fas fa-thumbtack"></i>
+                        <span>Overview</span>
+                    </div>
+
+                    <p> 
+                        Explored the fundamentals of AI, AI Problem Scoping, 
+                        and the AI Project Cycle. Learned the purpose of essential Python libraries 
+                        such as NumPy, Pandas, Matplotlib etc.
+                    </p>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+
+                    <ul>
+                        <li>Introduction to Artificial Intelligence</li>
+                        <li>AI Problem Scoping</li>
+                        <li>AI Project Cycle</li>
+                        <li>NumPy, Pandas & BeautifulSoup</li>
+                    </ul>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Outcome</span>
+                    </div>
+
+                    <p>
+                        Built a strong foundation in AI concepts and understood the complete
+                        workflow required to develop intelligent applications.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= WEEK 2 ================= -->
+
+        <div class="roadmap-item right">
+            <div class="roadmap-node">2</div>
+
+            <div class="week-card">
+                <h3>Week 2 – Web Scraping & GitHub <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="week-details">
+                     <div class="detail-heading">
+                        <i class="fas fa-thumbtack"></i>
+                        <span>Overview</span>
+                    </div>
+
+                    <p>
+                        This week focused on collecting real-world data using
+                        web scraping. I learned how websites are structured,
+                        extracted information from HTML pages, and managed my
+                        projects efficiently.
+                    </p>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+
+                    <ul>
+                        <li>Web Scraping using BeautifulSoup,Requests</li>
+                        <li>Data Processing with Pandas</li>
+                        <li>Git & GitHub Repository Management</li>
+                        <li>Creating CSV datasets</li>
+                    </ul>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Outcome</span>
+                    </div>
+                    <p>
+                        Successfully extracted, cleaned, and stored data from
+                        websites while learning professional project management
+                        using GitHub.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= WEEK 3 ================= -->
+
+        <div class="roadmap-item left">
+            <div class="roadmap-node">3</div>
+
+            <div class="week-card">
+                <h3>Week 3 – Flask & Power BI <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="week-details">
+
+                    <div class="detail-heading">
+                        <i class="fas fa-thumbtack"></i>
+                        <span>Overview</span>
+                    </div>
+                    <p>
+                        I learned how dynamic websites
+                        are created and developed my personal portfolio website.
+                        Alongside this, I explored data cleaning techniques and
+                        created interactive dashboards using Power BI.
+                    </p>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+                    <ul>
+                        <li>Flask Framework</li>
+                        <li>Portfolio Website Development</li>
+                        <li>Data Cleaning</li>
+                        <li>Power BI Dashboard Creation</li>
+                    </ul>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Outcome</span>
+                    </div>
+                    <p>
+                        Built a responsive portfolio website and learning how
+                        to visualize  insights through interactive dashboards.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= WEEK 4 ================= -->
+
+        <div class="roadmap-item right">
+            <div class="roadmap-node">4</div>
+
+            <div class="week-card">
+                <h3>Week 4 – Machine Learning <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="week-details">
+
+                    <div class="detail-heading">
+                        <i class="fas fa-thumbtack"></i>
+                        <span>Overview</span>
+                    </div>
+                    <p>
+                        Studied regression and classification concepts, implemented 
+                        popular machine learning algorithms, and learned how to train, 
+                        evaluate, and compare models using different performance metrics.
+                    </p>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+                    <ul>
+                        <li>Regression & Classification</li>
+                        <li> Time Series Forecasting</li>
+                        <li>Accuracy, Precision, Recall & F1-Score</li>
+                    </ul>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Outcome</span>
+                    </div>
+                    <p>
+                        Learned to train, evaluate, and compare machine learning
+                        models to choose the best algorithm for different datasets.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= WEEK 5 ================= -->
+
+        <div class="roadmap-item left">
+            <div class="roadmap-node">5</div>
+
+            <div class="week-card">
+                <h3>Week 5 – Generative AI & Gemini API <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="week-details">
+
+                    <div class="detail-heading">
+                        <i class="fas fa-thumbtack"></i>
+                        <span>Overview</span>
+                    </div>
+                    <p>
+                        Integrated the Gemini API into Python applications,
+                         understood model training concepts, and learned the 
+                         practical use cases of various machine learning algorithms.
+                    </p>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+                    <ul>
+                        <li>Gemini API Integration</li>
+                        <li>AI Response Generation</li>
+                        <li>Model Training Concepts</li>
+                        <li>Real-world ML Algorithm Use Cases</li>
+                    </ul>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Outcome</span>
+                    </div>
+                    <p>
+                        Successfully integrated Generative AI into Python
+                        and gained practical knowledge of building
+                        AI-powered solutions.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= WEEK 6 ================= -->
+
+        <div class="roadmap-item right">
+            <div class="roadmap-node">6</div>
+
+            <div class="week-card">
+                <h3>Week 6 – Capstone Project: FAQFlow AI <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="week-details">
+
+                    <div class="detail-heading">
+                        <i class="fas fa-thumbtack"></i>
+                        <span>Overview</span>
+                    </div>
+                    <p>
+                        Applied all the acquired skills by developing FAQFlow AI, 
+                        an AI-powered FAQ management system using Flask, integrating AI, 
+                        database management, authentication, and chatbot functionality
+                        into a complete web application.
+                    </p>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+                    <ul>
+                        <li>Database Integration</li>
+                        <li>User Authentication</li>
+                        <li>AI Chatbot Integration</li>
+                        <li>End-to-End Project Development</li>
+                    </ul>
+
+                    <div class="detail-heading">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Outcome</span>
+                    </div>
+                    <p>
+                        Successfully delivered a complete AI-powered web
+                        application, applying all the skills acquired during the
+                        internship.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/roadmap.js') }}?v=1"></script>
+
+{% endblock %}

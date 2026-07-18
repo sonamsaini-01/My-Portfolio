@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/roadmap.css') }}?v=3">
+
+<!-- ===================== SCHOOL JOURNEY SECTION ===================== -->
+
+<section id="school-journey" class="section">
+
+    <div class="section-title">
+        <span>School Days</span>
+        <h2>My School Journey</h2>
+        <p>
+            Where it all started — Sanjay Gandhi Memorial Senior Secondary Public
+            School, Ladwa. From Class 10 to choosing Non-Medical with Computer
+            Science, these years shaped my curiosity for technology.
+        </p>
+
+        <a href="{{ url_for('journey') }}" class="certificate-btn roadmap-back">
+            <i class="fas fa-arrow-left"></i> Back to My Journey
+        </a>
+    </div>
+
+    <!-- ================= SENIOR SECONDARY ================= -->
+
+    <div id="senior-secondary" class="school-block">
+
+        <div class="school-block-header">
+            <div class="school-year-badge">2023 - 2024</div>
+            <h3>Senior Secondary (+2) — Non-Medical, Computer Science</h3>
+            <p>
+                Chose Non-Medical with Computer Science and discovered my love
+                for logic and problem solving. These two years pushed me toward
+                engineering and set the direction for everything that came after.
+            </p>
+        </div>
+
+        <div class="achievement-grid">
+
+            <div class="achievement-card">
+                <i class="fas fa-medal"></i>
+                <h4>Gold Medal — SOF Olympiad</h4>
+                <p>Won a gold medal in the Science Olympiad Foundation olympiad.</p>
+            </div>
+
+            <div class="achievement-card">
+                <i class="fas fa-pen-nib"></i>
+                <h4>Student Editor</h4>
+                <p>Served as the Student Editor of the school magazine.</p>
+            </div>
+
+            <div class="achievement-card">
+                <i class="fas fa-flag"></i>
+                <h4>State-Level Events</h4>
+                <p>Participated in many events at local and state level.</p>
+            </div>
+
+            <div class="achievement-card">
+                <i class="fas fa-laptop-code"></i>
+                <h4>First Steps in CS</h4>
+                <p>Studied Computer Science formally and wrote my first programs.</p>
+            </div>
+
+        </div>
+
+        <!-- Add photos: drop images in static/images/school/ and replace the
+             placeholder divs below with:
+             <img src="{{ url_for('static', filename='images/school/your-photo.jpg') }}" alt="School memory"> -->
+        <div class="photo-gallery">
+
+            <div class="photo-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>Photo coming soon</span>
+            </div>
+
+            <div class="photo-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>Photo coming soon</span>
+            </div>
+
+            <div class="photo-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>Photo coming soon</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= MATRICULATION ================= -->
+
+    <div id="matriculation" class="school-block">
+
+        <div class="school-block-header">
+            <div class="school-year-badge">2021 - 2022</div>
+            <h3>Matriculation — Class 10</h3>
+            <p>
+                The foundation years. Class 10 taught me discipline, consistency
+                and gave me my first spark of curiosity about how science and
+                technology work.
+            </p>
+        </div>
+
+        <div class="achievement-grid">
+
+            <div class="achievement-card">
+                <i class="fas fa-award"></i>
+                <h4>Academic Performance</h4>
+                <p>Completed Class 10 with strong academic results.</p>
+            </div>
+
+            <div class="achievement-card">
+                <i class="fas fa-users"></i>
+                <h4>School Activities</h4>
+                <p>Active participation in school events and competitions.</p>
+            </div>
+
+            <div class="achievement-card">
+                <i class="fas fa-seedling"></i>
+                <h4>The Spark</h4>
+                <p>Developed the curiosity for science that led me to engineering.</p>
+            </div>
+
+        </div>
+
+        <div class="photo-gallery">
+
+            <div class="photo-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>Photo coming soon</span>
+            </div>
+
+            <div class="photo-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>Photo coming soon</span>
+            </div>
+
+            <div class="photo-placeholder">
+                <i class="fas fa-camera"></i>
+                <span>Photo coming soon</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

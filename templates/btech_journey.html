@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/roadmap.css') }}?v=3">
+
+<!-- ===================== B.TECH ROADMAP SECTION ===================== -->
+
+<section id="btech-roadmap" class="section">
+
+    <div class="section-title">
+        <span>Bachelor of Technology</span>
+        <h2>My B.Tech Journey</h2>
+        <p>
+            Semester by semester at JMIETI Radaur — from writing my first
+            program to building AI-powered applications. Click on any
+            semester to explore what I learned and achieved.
+        </p>
+
+        <a href="{{ url_for('journey') }}" class="certificate-btn roadmap-back">
+            <i class="fas fa-arrow-left"></i> Back to My Journey
+        </a>
+    </div>
+
+    <div class="roadmap sem-roadmap">
+
+        <div class="roadmap-line"></div>
+
+        <!-- ================= SEMESTER 1 ================= -->
+
+        <div class="roadmap-item left">
+            <div class="roadmap-node sem-node">S1</div>
+
+            <div class="week-card">
+                <span class="sem-badge done">Completed</span>
+                <h3>Semester 1 – The Beginning <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="sem-tags">
+                    <span>SGPA - 8.62</span>
+                    <span>C Programming</span>
+                    <span>Basics of CSE</span>
+                    <span>Participation in SIH</span>
+                </div>
+
+                <div class="week-details">
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+
+                    <ul>
+                        <li>⭐Built a strong foundation in C programming, Engineering Mathematics, and core computer science concepts.</li>
+
+                        <li>⭐Participated in my first national-level hackathon, <strong>Smart India Hackathon (SIH)</strong>, inspiring my interest in innovation and problem-solving.</li>
+
+                        <li>⭐Actively participated in technical and cultural events, earning 10+ certificates during my first semester.</li>
+
+                        <li>⭐Maintained excellent academic performance while adapting to college life and developing self-learning skills.</li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SEMESTER 2 ================= -->
+
+        <div class="roadmap-item right">
+            <div class="roadmap-node sem-node">S2</div>
+
+            <div class="week-card">
+                <span class="sem-badge done">Completed</span>
+                <h3>Semester 2 – Exploration<i class="fas fa-chevron-down"></i></h3>
+
+                <div class="sem-tags">
+                    <span>SGPA- 8.40</span>
+                    <span>Minor Projects</span>
+                    <span>Web Basics</span>
+                    <span>Blood Donation</span>
+                </div>
+
+                <div class="week-details">
+
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+
+                    <ul>
+                        <li>⭐HTML & CSS for frontend development</li>
+                        <li>⭐Built responsive web pages</li>
+                        <li>⭐Active participation in technical and cultural events</li>
+                        <li>⭐Self-learning through online resources</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SEMESTER 3 ================= -->
+
+        <div class="roadmap-item left">
+            <div class="roadmap-node sem-node">S3</div>
+
+            <div class="week-card">
+                <span class="sem-badge done">Completed</span>
+                <h3>Semester 3 – Levelling Up <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="sem-tags">
+                    <span>SGPA- 9.20</span>
+                    <span>DSA & Core CSE</span>
+                    <span>Python</span>
+                    <span>Hackathons</span>
+                </div>
+
+                <div class="week-details">
+
+       
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+
+                    <ul>
+                        <li>⭐C++ & Object-Oriented Programming (OOPs)</li>
+                        <li>⭐Learned Python Basics</li>
+                        <li>⭐Computer Organization & Architecture (COA)</li>
+                        <li>⭐Data Structures and Algorithms (DSA)</li>
+                        <li>⭐Teamwork under pressure in hackathons</li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- ================= SEMESTER 4 ================= -->
+        <div class="roadmap-item right">
+            <div class="roadmap-node sem-node">S4</div>
+
+            <div class="week-card">
+                <span class="sem-badge done">Completed</span>
+                <h3>Semester 4 – Innovation <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="sem-tags">
+                    <span>SGPA</span>
+                    <span>Java</span>
+                    <span>Co-ordinator</span>
+                    <span>Elite Her</span>
+                </div>
+
+                <div class="week-details">
+
+
+                    <div class="detail-heading">
+                        <i class="fas fa-book-open"></i>
+                        <span>Key Learnings</span>
+                    </div>
+
+                    <ul>
+                        <li>⭐Learned Java fundamentals, JDBC, and Java frameworks.</li>
+                        <li>⭐Participated in EliteHer and Rockverse hackathons, securing top team positions.</li>
+                        <li>⭐Enhanced communication, teamwork, and problem-solving skills.</li>
+                        <li>⭐Coordinated multiple technical and cultural events in college.</li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= WHAT'S NEXT ================= -->
+
+        <div class="roadmap-item left">
+            <div class="roadmap-node sem-node next-node"><i class="fas fa-rocket"></i></div>
+
+            <div class="week-card">
+                <span class="sem-badge upcoming">Upcoming</span>
+                <h3>Semester 5 & Beyond <i class="fas fa-chevron-down"></i></h3>
+
+                <div class="sem-tags">
+                    <span>Deep Learning</span>
+                    <span>Major Projects</span>
+                    <span>Internships</span>
+                </div>
+
+                <div class="week-details">
+
+                    <div class="detail-heading">
+                        <i class="fas fa-thumbtack"></i>
+                        <span>The Plan</span>
+                    </div>
+
+                    <p>
+                        Going deeper into AI, building bigger end-to-end projects,
+                        contributing to open source, and preparing for industry
+                        internships. The journey has just begun.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/roadmap.js') }}?v=1"></script>
+
+{% endblock %}

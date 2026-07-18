@@ -106,3 +106,229 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* ===================== CATEGORY GRIDS ===================== */
+
+/* Featured grid: 3 across so 6 cards form 2 clean rows */
+.featured-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Whole featured card is a link */
+.featured-card {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Emoji inside the glowing circle */
+.icon-wrapper.emoji-icon span {
+    font-size: 34px;
+    line-height: 1;
+}
+
+/* ===================== PROJECT DETAIL PAGE ===================== */
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #38BDF8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #7DD3FC;
+}
+
+.detail-hero {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 20px;
+    padding: 50px 30px;
+    margin-bottom: 40px;
+}
+
+.detail-emoji {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.detail-hero h1 {
+    font-size: 2.5rem;
+    color: #F8FAFC;
+    margin-bottom: 12px;
+}
+
+.detail-tagline {
+    color: #94A3B8;
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.detail-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.detail-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.github-btn {
+    background: #F8FAFC;
+    color: #0F172A;
+}
+
+.github-btn:hover {
+    background: #38BDF8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+.demo-btn {
+    background: transparent;
+    color: #38BDF8;
+    border: 1px solid #38BDF8;
+}
+
+.demo-btn:hover {
+    background: #38BDF8;
+    color: #0F172A;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+.demo-btn.disabled {
+    opacity: 0.5;
+    cursor: default;
+    border-color: #64748B;
+    color: #94A3B8;
+}
+
+.demo-btn.disabled:hover {
+    background: transparent;
+    color: #94A3B8;
+    box-shadow: none;
+}
+
+.tech-tags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: #7DD3FC;
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.detail-block {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 15px;
+    padding: 30px 35px;
+    margin-bottom: 25px;
+}
+
+.detail-block h2 {
+    color: #F8FAFC;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.detail-block h2 i {
+    color: #38BDF8;
+}
+
+.detail-block p {
+    color: #94A3B8;
+    line-height: 1.8;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    color: #94A3B8;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.feature-list li i {
+    color: #38BDF8;
+    margin-top: 5px;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.screenshot-grid img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.coming-soon-note {
+    font-style: italic;
+    color: #64748B !important;
+}
+
+@media (max-width: 768px) {
+    .detail-hero {
+        padding: 35px 20px;
+    }
+
+    .detail-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .detail-block {
+        padding: 25px 20px;
+    }
+
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+}
