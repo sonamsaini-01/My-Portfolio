@@ -38,11 +38,7 @@
 
         <div class="achievement-grid">
 
-            <div class="achievement-card">
-                <i class="fas fa-medal"></i>
-                <h4>Gold Medal — SOF Olympiad</h4>
-                <p>Won a gold medal in the Science Olympiad Foundation olympiad.</p>
-            </div>
+            
 
             <div class="achievement-card">
                 <i class="fas fa-pen-nib"></i>
@@ -52,8 +48,8 @@
 
             <div class="achievement-card">
                 <i class="fas fa-flag"></i>
-                <h4>State-Level Events</h4>
-                <p>Participated in many events at local and state level.</p>
+                <h4>Academic Performance</h4>
+                <p>Completed with a strong academic results.</p>
             </div>
 
             <div class="achievement-card">
@@ -67,21 +63,32 @@
         <!-- Add photos: drop images in static/images/school/ and replace the
              placeholder divs below with:
              <img src="{{ url_for('static', filename='images/school/your-photo.jpg') }}" alt="School memory"> -->
-        <div class="photo-gallery">
+        <!-- School Gallery -->
+            <div class="photo-gallery">
 
+                <div class="photo-placeholder">
+                    <img src="{{ url_for('static', filename='images/12class.jpg') }}"
+                        alt="School Memory"
+                        class="gallery-image">
+                </div>
+
+           
             <div class="photo-placeholder">
-                <i class="fas fa-camera"></i>
-                <span>Photo coming soon</span>
+               <img src="{{ url_for('static', filename='images/house.jpg') }}"
+                        alt="School Memory"
+                        class="gallery-image">
+            </div>
+            
+            <div class="photo-placeholder">
+                <img src="{{ url_for('static', filename='images/editor.jpg') }}"
+                        alt="School Memory"
+                        class="gallery-image">
             </div>
 
             <div class="photo-placeholder">
-                <i class="fas fa-camera"></i>
-                <span>Photo coming soon</span>
-            </div>
-
-            <div class="photo-placeholder">
-                <i class="fas fa-camera"></i>
-                <span>Photo coming soon</span>
+               <img src="{{ url_for('static', filename='images/event.jpg') }}"
+                        alt="School Memory"
+                        class="gallery-image">
             </div>
 
         </div>
@@ -117,6 +124,12 @@
             </div>
 
             <div class="achievement-card">
+                <i class="fas fa-medal"></i>
+                <h4>Gold Medal — SOF Olympiad</h4>
+                <p>Won a gold medal in the Science Olympiad Foundation olympiad.</p>
+            </div>
+
+            <div class="achievement-card">
                 <i class="fas fa-seedling"></i>
                 <h4>The Spark</h4>
                 <p>Developed the curiosity for science that led me to engineering.</p>
@@ -127,20 +140,27 @@
         <div class="photo-gallery">
 
             <div class="photo-placeholder">
-                <i class="fas fa-camera"></i>
-                <span>Photo coming soon</span>
+                <img src="{{ url_for('static', filename='images/tenth.jpg') }}"
+                        alt="School Memory"
+                        class="gallery-image">
             </div>
 
             <div class="photo-placeholder">
-                <i class="fas fa-camera"></i>
-                <span>Photo coming soon</span>
+                <img src="{{ url_for('static', filename='images/sof.jpg') }}"
+                        alt="School Memory"
+                        class="gallery-image">
             </div>
 
             <div class="photo-placeholder">
-                <i class="fas fa-camera"></i>
-                <span>Photo coming soon</span>
+                <img src="{{ url_for('static', filename='images/class10.jpg') }}"
+                        alt="School Memory"
+                        class="gallery-image">
             </div>
-
+            <div class="photo-placeholder">
+                <img src="{{ url_for('static', filename='images/trip.jpg') }}"
+                        alt="School Memory"
+                        class="gallery-image">
+            </div>
         </div>
 
     </div>

@@ -1,7 +1,130 @@
+{% extends "base.html" %}
+
 {% block content %}
 
-<!-- Home page -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}?v=1">
 
 {% include "hero.html" %}
+
+<!-- ===================== STATS STRIP ===================== -->
+
+<section class="stats-strip" aria-label="Quick stats">
+
+    <div class="stat">
+        <span class="stat-num"><span data-count="5">0</span>+</span>
+        <span class="stat-label">Projects Built</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-num"><span data-count="15">0</span>+</span>
+        <span class="stat-label">Certificates</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-num"><span data-count="4">0</span>+</span>
+        <span class="stat-label">Hackathons</span>
+    </div>
+
+    <div class="stat">
+        <span class="stat-num"><span data-count="6">0</span></span>
+        <span class="stat-label">Week AIML Internship</span>
+    </div>
+
+</section>
+
+<!-- ===================== TECH MARQUEE ===================== -->
+
+<section class="tech-belt" aria-label="Technologies I work with">
+
+    <div class="tech-track">
+
+        {% for _ in range(2) %}
+        <div class="tech-group" {% if not loop.first %}aria-hidden="true"{% endif %}>
+            <span class="tech-chip"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-chip"><i class="fas fa-flask"></i> Flask</span>
+            <span class="tech-chip"><i class="fas fa-table"></i> Pandas</span>
+            <span class="tech-chip"><i class="fas fa-brain"></i> Scikit-learn</span>
+            <span class="tech-chip"><i class="fas fa-chart-pie"></i> Power BI</span>
+            <span class="tech-chip"><i class="fas fa-database"></i> SQL</span>
+            <span class="tech-chip"><i class="fas fa-robot"></i> Gemini API</span>
+            <span class="tech-chip"><i class="fas fa-spider"></i> BeautifulSoup</span>
+            <span class="tech-chip"><i class="fas fa-mouse-pointer"></i> Selenium</span>
+            <span class="tech-chip"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span>
+            <span class="tech-chip"><i class="fab fa-html5"></i> HTML/CSS</span>
+            <span class="tech-chip"><i class="fab fa-java"></i> Java</span>
+            <span class="tech-chip"><i class="fas fa-code"></i> C/C++</span>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- ===================== FEATURED PROJECTS PREVIEW ===================== -->
+
+<section class="home-projects">
+
+    <div class="home-projects-head">
+        <div>
+           
+            <h2>Featured Projects</h2>
+        </div>
+        <a href="{{ url_for('projects') }}" class="see-journey-btn">
+            View all projects <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="home-projects-grid">
+
+        {% for slug, project in featured.items() %}
+        {% if loop.index <= 3 %}
+        <a href="{{ url_for('project_detail', slug=slug) }}" class="project-card home-project-card">
+
+            <div class="hp-top">
+                <span class="hp-emoji">{{ project.emoji }}</span>
+                <i class="fas fa-arrow-up-right-from-square hp-open"></i>
+            </div>
+
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.tagline }}</p>
+
+            <div class="hp-tech">
+                {% for tech in project.tech[:3] %}
+                <span>{{ tech }}</span>
+                {% endfor %}
+            </div>
+
+        </a>
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- ===================== CTA ===================== -->
+
+<section class="home-cta">
+
+
+    <h2>Have an idea worth building?</h2>
+
+    <p class="home-cta-sub">
+        I'm always up for interesting projects, hackathon teams, and
+        internship opportunities. Let's talk.
+    </p>
+
+    <div class="dev-actions center">
+        <a href="{{ url_for('contact') }}" class="btn primary-btn">
+            <i class="fas fa-paper-plane"></i> Get in Touch
+        </a>
+        <a href="https://github.com/sonamsaini-01" target="_blank" rel="noopener" class="btn secondary-btn">
+            <i class="fab fa-github"></i> See My GitHub
+        </a>
+    </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/home.js') }}?v=1"></script>
 
 {% endblock %}

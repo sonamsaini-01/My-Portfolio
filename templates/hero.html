@@ -1,68 +1,90 @@
-{% extends "base.html" %}
+<!-- ===================== HERO (partial, included by index.html) ===================== -->
 
-{% block content %}
+<section id="home" class="dev-hero">
 
-<!-- ===================== HERO SECTION ===================== -->
+    <div class="dev-hero-inner">
 
-<section id="home" class="hero">
+        <!-- Left: intro -->
+        <div class="dev-intro">
 
-    <div class="hero-container">
+            <span class="status-chip">
+                <span class="status-dot"></span>
+                Open to internships &amp; collabs
+            </span>
 
-        <!-- Left Content -->
-        <div class="hero-content">
+            <p class="dev-eyebrow">// hello world, I'm</p>
 
-            <p class="hero-subtitle">
-                👋 Hello, I'm
-            </p>
+            <h1 class="dev-name">Sonam</h1>
 
-            <h1 class="hero-title">
-                Sonam
-            </h1>
-
-            <h2 class="hero-role">
-                AI Enthusiast <span>|</span>
-                Hackathon Participant
+            <h2 class="typed-line">
+                <span class="typed-prefix">&gt;</span>
+                <span class="hero-role"></span><span class="typed-caret"></span>
             </h2>
 
-            <p class="hero-description">
-                I'm a Computer Science Engineering student passionate about
-                Artificial Intelligence, Machine Learning, and Full-Stack
-                Development. I enjoy creating intelligent solutions that solve
-                real-world problems and continuously learning emerging technologies.
+            <p class="dev-desc">
+                CSE undergrad building AI-powered, data-driven web apps with
+                Python and Flask — from web scrapers to full-stack chatbots.
+                I like turning "what if" into deployed projects.
             </p>
 
-            <div class="hero-buttons">
+            <div class="dev-actions">
 
-                <a href="/projects" class="btn primary-btn">
+                <a href="{{ url_for('projects') }}" class="btn primary-btn">
                     <i class="fas fa-code"></i>
                     View Projects
                 </a>
 
                 <a href="{{ url_for('static', filename='files/Resume.pdf') }}"
-                    class="btn secondary-btn"
-                    download>
-
+                   class="btn secondary-btn" id="resumeLink" download>
                     <i class="fas fa-download"></i>
                     Download Resume
-
                 </a>
 
             </div>
 
-            <div class="hero-socials">
-
-                
-
+            <div class="dev-socials">
+                <a href="https://github.com/sonamsaini-01" target="_blank" rel="noopener" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sonam-saini-047436326/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="{{ url_for('contact') }}" aria-label="Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
 
         </div>
 
-        <!-- Right Content -->
-        <div class="hero-image">
+        <!-- Right: live code editor + interactive terminal -->
+        <div class="code-window">
 
-            <div class="image-wrapper">
+            <div class="cw-titlebar">
+                <span class="cw-dot red"></span>
+                <span class="cw-dot yellow"></span>
+                <span class="cw-dot green"></span>
 
-               <img src="{{ url_for('static', filename='images/me pic.jpeg') }}" alt="Sonam">
+                <span class="cw-tab"><i class="fab fa-python"></i> sonam.py</span>
+
+                <span class="cw-live"><span class="cw-live-dot"></span>live</span>
+            </div>
+
+            <pre class="cw-editor" aria-label="Python code introducing Sonam"><code id="codeTarget"></code><span class="cw-cursor" id="codeCursor"></span></pre>
+
+            <div class="cw-term" id="term">
+
+                <div class="cw-term-head">
+                    <i class="fas fa-terminal"></i> TERMINAL — try typing <b>help</b>
+                </div>
+
+                <div class="cw-term-out" id="termOut"></div>
+
+                <div class="cw-term-line">
+                    <span class="t-prompt">sonam@portfolio:~$</span>
+                    <input id="termIn" type="text" autocomplete="off" spellcheck="false"
+                           aria-label="Portfolio terminal. Type help and press Enter."
+                           placeholder="help">
+                </div>
 
             </div>
 
@@ -70,20 +92,8 @@
 
     </div>
 
-    <!-- Scroll Down -->
-
-    <!-- <div class="scroll-down">
-
-        <a href="#about">
-
-            <span>Scroll Down</span>
-
-            <i class="fas fa-chevron-down"></i>
-
-        </a>
-
-    </div> -->
+    <div class="scroll-cue" aria-hidden="true">
+        <span></span>
+    </div>
 
 </section>
-
-{% endblock %}
